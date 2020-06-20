@@ -55,9 +55,9 @@ export default {
   data() {
     return {
       date: date.getFullYear(),
-      drawer: null,
+      drawer: null
     };
-  },
+  }
 };
 </script>
 

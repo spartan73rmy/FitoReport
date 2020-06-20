@@ -1,4 +1,5 @@
 <template>
+
   <v-stepper v-model="e1">
     <v-stepper-header>
       <v-stepper-step :complete="e1 > 1" step="1">Productor</v-stepper-step>
@@ -92,16 +93,15 @@
             </v-row>
           </v-container>
         </v-card-text>
-        <v-btn color="primary" @click="e1 = 3">Continuar</v-btn>
 
+        <v-btn color="primary" @click="e1 = 3">Continuar</v-btn>
         <v-btn text>Cancelar</v-btn>
       </v-stepper-content>
 
       <v-stepper-content step="3">
-        <v-card class="mb-12" color="grey lighten-1" height="200px"></v-card>
+        <ProductTable />
 
         <v-btn color="primary" @click="e1 = 1">Aceptar</v-btn>
-
         <v-btn text>Cancelar</v-btn>
       </v-stepper-content>
     </v-stepper-items>
@@ -109,8 +109,14 @@
 </template>
 
 <script>
+import ProductTable from "./ProductTable.vue";
+import { db } from "../main";
+
+
 export default {
-  components: {},
+  components: {
+    ProductTable
+  },
   mounted() {
     // this.getEnfermedades();
     // this.getPlagas();

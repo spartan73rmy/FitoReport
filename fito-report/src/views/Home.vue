@@ -1,6 +1,6 @@
 <template>
   <div id="Home">
-      <router-view />
+    <router-view />
   </div>
 </template>
 
@@ -8,20 +8,19 @@
 import { db } from "../main";
 
 export default {
-  components: {
-  },
+  components: {},
   mounted() {
     this.getReports();
   },
   props: {
-    source: String,
+    source: String
   },
   methods: {
     async getReports() {
       try {
         const collection = await db.collection("reporte").get();
         let items = [];
-        collection.forEach((el) => {
+        collection.forEach(el => {
           items.push(el.data());
           console.log(el.data());
         });
@@ -30,12 +29,12 @@ export default {
         console.error(error);
         return [];
       }
-    },
+    }
   },
   data() {
     return {
-      dialog: false,
+      dialog: false
     };
-  },
+  }
 };
 </script>

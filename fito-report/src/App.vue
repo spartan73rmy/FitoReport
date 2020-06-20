@@ -17,11 +17,11 @@ export default {
 
   components: {
     Navigation,
-    Home,
+    Home
   },
 
   data: () => ({
     //
-  }),
+  })
 };
 </script>
