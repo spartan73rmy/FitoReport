@@ -103,7 +103,7 @@
 </template>
 
 <script lang="ts">
-import { db } from "../main";
+import { db } from "../firebase";
 
 export default {
   components: {},
